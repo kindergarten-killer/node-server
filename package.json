@@ -1,0 +1,28 @@
+{
+  "name": "L-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-register": "^6.26.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json-error": "^3.1.2",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^10.1.1",
+    "log4js": "^6.4.4",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
