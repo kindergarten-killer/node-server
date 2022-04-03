@@ -1,0 +1,68 @@
+[2022-04-03T23:28:34.600] [ERROR] error - {
+  method: 'GET',
+  url: '/user?id=1',
+  body: {},
+  user: undefined,
+  err: ReferenceError: a is not defined
+      at D:\Project Center\L-blog\app.js:72:17
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:372:16
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:377:31)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project Center\L-blog\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at verifyParam (D:\Project Center\L-blog\node_modules\koa-parameter\index.js:52:13)
+}
+[2022-04-03T23:29:38.739] [ERROR] error - {
+  method: 'GET',
+  url: '/user?id=1',
+  body: {},
+  user: undefined,
+  err: ReferenceError: a is not defined
+      at D:\Project Center\L-blog\app.js:69:17
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:372:16
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:377:31)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project Center\L-blog\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at verifyParam (D:\Project Center\L-blog\node_modules\koa-parameter\index.js:52:13)
+}
+[2022-04-03T23:29:42.053] [ERROR] error - {
+  method: 'GET',
+  url: '/user?id=1',
+  body: {},
+  user: undefined,
+  err: ReferenceError: a is not defined
+      at D:\Project Center\L-blog\app.js:69:17
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:372:16
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:377:31)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project Center\L-blog\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at verifyParam (D:\Project Center\L-blog\node_modules\koa-parameter\index.js:52:13)
+}
+[2022-04-04T00:07:08.656] [ERROR] error - {
+  method: 'GET',
+  url: '/tables',
+  body: {},
+  user: undefined,
+  err: ReferenceError: ctx is not defined
+      at D:\Project Center\L-blog\router\table.js:8:5
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:372:16
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at D:\Project Center\L-blog\node_modules\koa-compose\index.js:34:12
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-router\lib\router.js:377:31)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at jsonError (D:\Project Center\L-blog\node_modules\koa-json-error\lib\middleware.js:49:12)
+      at dispatch (D:\Project Center\L-blog\node_modules\koa-compose\index.js:42:32)
+      at verifyParam (D:\Project Center\L-blog\node_modules\koa-parameter\index.js:52:13)
+}

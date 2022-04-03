@@ -1,24 +1,47 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser');
 const parameter = require('koa-parameter')
-const Router = require('koa-router')
 const error = require('koa-json-error')
+const Router = require("koa-router");
 const app = new Koa();
-const Log = require('./log4/logger');
+const log4js = require('./log4js/log4js')
+//requireDirectory是一个直接导出的方法
+const requireDirectory = require("require-directory");
+//监听端口号
+const port = '3000';
+//服务端地址
+const host = '0.0.0.0'
 
-app.use(Log({
-    env: app.env,  // koa 提供的环境变量
-    projectName: 'back-API',
-    appLogLevel: 'debug',
-    dir: 'logs',
-    serverIp: '192.168.108.100'
-}))
+/*
+*日志处理模块，包含错误日志，响应日志
+**/
+// logger
+app.use(async (ctx, next) => {
+  const start = new Date()
+  await next()
+  const ms = new Date() - start
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+  log4js.resLogger(ctx, ms)
+})
+
+// error-handling
+app.on('error', (err, ctx) => {
+  log4js.errLogger(ctx, err)
+  console.error('server error', err)
+})
+
+
+
 app.use(bodyParser());  // 解析request的body
-app.use(parameter(app))
+app.use(parameter(app)) //参数验证
+
+/*
+*全局请求错误处理
+**/
 app.use(error({
     postFormat:( e, {stack,name,...rest}) => {
         if(process.env.NODE_ENV === 'production') {
-            console.log(rest)
+
             switch(rest.status) {
                 case 500:
                     rest.message = '服务器内部错误';
@@ -42,24 +65,17 @@ app.use(error({
     }
 }))
 
-const router = new Router()
+/*
+*加载所有路由并挂载
+**/
+function whenLoadModule(router) {
+    if (router instanceof Router)
+      app.use(router.routes()).use(router.allowedMethods());
+}  
 
-router.get('/', async (ctx, next) => {
+//requireDirectory方法也支持opitons参数，配置响应的回调函数
+requireDirectory(module, "./router", { visit: whenLoadModule });
+
+app.listen(port, host, () => {
+    console.log(`API server listening on ${host}:${port}`);
 })
-
-
-router.get('/user', async (ctx, next) => {
-    ctx.verifyParams({
-        id:{type:'number',required:true},
-        title:{type: 'string', required: false}
-    })
-    ctx.body = 'hello world'
-})
-
-app.use(router.routes());
-// response
-app.use(async ctx => {
-    
-})
-
-app.listen(3000)

@@ -1,0 +1,75 @@
+[2022-04-03T23:28:34.607] [INFO] response - {
+  method: 'GET',
+  url: '/user?id=1',
+  user: undefined,
+  body: {},
+  costTime: 17,
+  authorization: undefined,
+  response: {
+    status: 500,
+    message: 'Internal Server Error',
+    body: { success: undefined }
+  }
+}
+[2022-04-03T23:29:38.743] [INFO] response - {
+  method: 'GET',
+  url: '/user?id=1',
+  user: undefined,
+  body: {},
+  costTime: 7,
+  authorization: undefined,
+  response: {
+    status: 500,
+    message: 'Internal Server Error',
+    body: { success: undefined }
+  }
+}
+[2022-04-03T23:29:42.055] [INFO] response - {
+  method: 'GET',
+  url: '/user?id=1',
+  user: undefined,
+  body: {},
+  costTime: 2,
+  authorization: undefined,
+  response: {
+    status: 500,
+    message: 'Internal Server Error',
+    body: { success: undefined }
+  }
+}
+[2022-04-03T23:30:06.103] [INFO] response - {
+  method: 'GET',
+  url: '/user?id=1',
+  user: undefined,
+  body: {},
+  costTime: 9,
+  authorization: undefined,
+  response: { status: 200, message: 'OK', body: { success: undefined } }
+}
+[2022-04-03T23:37:37.401] [INFO] response - {
+  method: 'GET',
+  url: '/',
+  user: undefined,
+  body: {},
+  costTime: 5,
+  authorization: undefined,
+  response: { status: 200, message: 'OK', body: { success: undefined } }
+}
+[2022-04-03T23:44:08.478] [INFO] response - {
+  method: 'GET',
+  url: '/',
+  user: undefined,
+  body: {},
+  costTime: 6,
+  authorization: undefined,
+  response: { status: 404, message: 'Not Found', body: { success: undefined } }
+}
+[2022-04-03T23:44:24.570] [INFO] response - {
+  method: 'GET',
+  url: '/api',
+  user: undefined,
+  body: {},
+  costTime: 1,
+  authorization: undefined,
+  response: { status: 200, message: 'OK', body: { success: undefined } }
+}

@@ -16,11 +16,13 @@
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-json-error": "^3.1.2",
+    "koa-log4": "^2.3.2",
     "koa-parameter": "^3.0.1",
     "koa-router": "^10.1.1",
     "log4js": "^6.4.4",
     "mongoose": "^6.2.9",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "require-directory": "^2.1.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"

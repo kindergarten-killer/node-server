@@ -1,0 +1,31 @@
+[2022-04-04T00:07:01.391] [INFO] response - {
+  method: 'GET',
+  url: '/api',
+  user: undefined,
+  body: {},
+  costTime: 4,
+  authorization: undefined,
+  response: { status: 404, message: 'Not Found', body: { success: undefined } }
+}
+[2022-04-04T00:07:08.660] [INFO] response - {
+  method: 'GET',
+  url: '/tables',
+  user: undefined,
+  body: {},
+  costTime: 5,
+  authorization: undefined,
+  response: {
+    status: 500,
+    message: 'Internal Server Error',
+    body: { success: undefined }
+  }
+}
+[2022-04-04T00:07:39.304] [INFO] response - {
+  method: 'GET',
+  url: '/tables',
+  user: undefined,
+  body: {},
+  costTime: 4,
+  authorization: undefined,
+  response: { status: 200, message: 'OK', body: { success: undefined } }
+}
